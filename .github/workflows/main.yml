@@ -1,0 +1,14 @@
+name: Cron Job
+
+on:
+  schedule:
+    - cron: '* * * * *'
+
+jobs:
+  send-request:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send GET request
+        run: |
+          curl https://script.google.com/macros/s/AKfycbw_ppFZS9rphc_qbyJNi25s7vg9Doj_L6LlQg3rILNJYUpyelgCImB88FUdiDQPKbAe/exec?e=itsworking
